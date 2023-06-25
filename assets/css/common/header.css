@@ -1,4 +1,8 @@
 .nav {
+    /* position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    background: var(--theme); */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

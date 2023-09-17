@@ -96,10 +96,10 @@
     overflow-x: auto;
 }
 
-.post-content ol,
+/* .post-content ol,
 .post-content ul {
     padding-inline-start: 20px;
-}
+} */
 
 .post-content li {
     margin-top: 5px;

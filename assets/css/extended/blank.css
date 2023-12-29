@@ -70,7 +70,8 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     overflow-y: auto;
 }
 
-.toc .inner::-webkit-scrollbar-thumb {  /*滚动条*/
+.toc .inner::-webkit-scrollbar-thumb {
+    /*滚动条*/
     background: var(--border);
     border: 7px solid var(--theme);
     border-radius: var(--radius);
@@ -89,4 +90,28 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .toc li a:hover {
     color: var(--secondary);
+}
+
+.post-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-entry>.post-info {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.post-entry>.entry-cover {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+    margin-bottom: unset;
+
+    max-height: 150px;
+    display: grid;
+    align-content: center;
 }

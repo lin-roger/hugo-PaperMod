@@ -99,27 +99,28 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 .post-entry>.post-info {
-    /* display: inline-block; */
+    display: inline-block;
     /* overflow: hidden; */
-    width: 75%;
+    min-width: 50%;
     /* padding-left: 10px; */
 }
 
 .post-entry>.entry-cover {
-    /* border-radius: 10px; */
-    /* overflow: hidden; */
-    width: 25%;
+    border-radius: 10px;
+    width: 20%;
     margin-bottom: unset;
-
-    /* max-height: 150px; */
-    /* display: grid; */
-    /* align-content: center; */
-    /* object-fit: contain; */
+    padding-right: 10px;
+    flex-shrink: 0;
 }
 
 .post-entry>.entry-cover>img {
-    object-fit: cover;
-    height: 150px;
+    object-fit: contain;
+    max-height: 175px;
+}
+
+.post-entry:hover{
+    /* border-radius: 0; */
+    box-shadow: 0 0 15px 15px var(--border);
 }
 
 .post-single>.entry-cover>img {

@@ -93,13 +93,15 @@
 .post-content figure,
 .post-content ul {
     margin-bottom: var(--content-gap);
-    overflow-x: auto;
+    overflow-x:auto;
+    overflow-y: hidden;
+
 }
 
-/* .post-content ol,
+.post-content ol,
 .post-content ul {
-    padding-inline-start: 20px;
-} */
+    padding-inline-start: 30px;
+}
 
 .post-content li {
     margin-top: 5px;

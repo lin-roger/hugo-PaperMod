@@ -118,7 +118,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     max-height: 175px;
 }
 
-.post-entry:hover{
+.post-entry:hover {
     /* border-radius: 0; */
     box-shadow: 0 0 15px 15px var(--border);
 }
@@ -128,3 +128,40 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     max-height: 65vh;
     padding-bottom: 10px;
 }
+
+.post-content img {
+    object-fit: contain;
+    max-height: 50vh;
+    margin: auto;
+}
+
+.post-content li>p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+
+}
+
+.post-content li>p>img{
+    flex-shrink: 0;
+    width: 50%;
+    padding-left: 20px;
+    margin: unset;
+    /* padding-right: 5px; */
+}
+.post-content li>p>span{
+    margin: auto;
+    object-fit: contain;
+    /* width: 100%; */
+    /* flex-shrink: 0; */
+}
+
+/* span{
+    overflow-y: hidden;
+} */
+
+/* .post-content li>p>* {
+    flex-shrink: 0;
+    width: 45%;
+} */

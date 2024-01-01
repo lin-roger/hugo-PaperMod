@@ -49,16 +49,16 @@
 
 @media screen and (max-width: 767px) {
 
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-    }
+    } */
 
-    ::-webkit-scrollbar-thumb {
+    /* ::-webkit-scrollbar-thumb {
         background: var(--tertiary);
         border: 3px solid var(--theme);
         border-radius: var(--radius);
-    }
+    } */
 }
 
 @media (prefers-reduced-motion) {

@@ -54,6 +54,7 @@
     .button:active,
     .post-entry:active,
     .top-link,
+    .toc-btn,
     #searchResults .focus,
     #searchResults li:active {
         transform: none;

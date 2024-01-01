@@ -1,10 +1,12 @@
 /* from reset */
 ::-webkit-scrollbar-track {
-    background: 0 0;
+    /* background: 0 0; */
+    background: none;
 }
 
 .list:not(.dark)::-webkit-scrollbar-track {
-    background: var(--code-bg);
+    /* background: var(--code-bg); */
+    background: none;
 }
 
 ::-webkit-scrollbar-thumb {

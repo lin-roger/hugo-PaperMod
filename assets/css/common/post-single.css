@@ -1,11 +1,11 @@
 .page-header,
 .post-header {
-    margin: 24px auto var(--content-gap) auto;
+    margin: 0 auto var(--content-gap) auto;
 }
 
 .post-title {
     margin-bottom: 2px;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .post-description {
@@ -13,10 +13,14 @@
     margin-bottom: 5px;
 }
 
+.breadcrumbs{
+    align-items: center;
+}
+
 .post-meta,
 .breadcrumbs {
     color: var(--secondary);
-    font-size: 14px;
+    font-size: 1rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -29,7 +33,7 @@
 }
 
 .breadcrumbs a {
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 .post-content {
@@ -41,37 +45,36 @@
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin: 24px 0 16px;
+    margin: 1.5rem 0 1rem;
 }
 
 .post-content h1 {
-    margin: 40px auto 32px;
-    font-size: 40px;
+    margin: 2.5rem auto 2rem;
+    font-size: 2.5rem;
 }
 
 .post-content h2 {
-    margin: 32px auto 24px;
-    font-size: 32px;
+    margin: 2rem auto 1.5rem;
+    font-size: 2rem;
 }
 
-.post-content h3 {
-    font-size: 24px;
-}
+/* .post-content h3 {
+    font-size: 1.5rem;
+} */
 
-.post-content h4 {
-    font-size: 16px;
-}
+/* .post-content h4 {
+    font-size: 1rem;
+} */
 
-.post-content h5 {
+/* .post-content h5 {
     font-size: 14px;
-}
+} */
 
-.post-content h6 {
+/* .post-content h6 {
     font-size: 12px;
-}
+} */
 
-.post-content a,
-.toc a:hover {
+.post-content a {
     box-shadow: 0 1px 0;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
@@ -197,7 +200,7 @@
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
-    font-size: 0.78em;
+    font-size: 1rem;
     line-height: 1.5;
     background: var(--code-bg);
     border-radius: 2px;
@@ -246,14 +249,14 @@
 
 .post-content figure > figcaption {
     color: var(--primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     margin: 8px 0 16px;
 }
 
 .post-content figure > figcaption > p {
     color: var(--secondary);
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: normal;
 }
 
@@ -316,11 +319,11 @@
 
 .post-tags a {
     display: block;
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
+    padding-inline-start: .8rem;
+    padding-inline-end: .8rem;
     color: var(--secondary);
-    font-size: 14px;
-    line-height: 34px;
+    font-size: 1rem;
+    line-height: 2rem;
     background: var(--code-bg);
 }
 
@@ -359,22 +362,24 @@ h6:hover .anchor {
 }
 
 .paginav {
-    margin: 10px 0;
+    margin-top: 10px;
+    padding-bottom: 5px;
     display: flex;
-    line-height: 30px;
+    /* line-height: 30px; */
     border-radius: var(--radius);
+    
 }
 
 .paginav a {
-    padding-inline-start: 14px;
-    padding-inline-end: 14px;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
     border-radius: var(--radius);
 }
 
 .paginav .title {
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-size: small;
+    font-size: 1rem;
     color: var(--secondary);
 }
 

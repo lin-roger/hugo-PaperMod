@@ -52,8 +52,10 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 .active {
-    font-size: 110%;
+    /* font-size: 10%; */
     font-weight: 600;
+    box-shadow: 0 1px 0;
+    /* text-decoration: underline solid; */
 }
 
 .toc ul {
@@ -88,7 +90,13 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     padding-bottom: 5px;
 }
 
-.toc li a:hover {
+.toc li a {
+    transition: all 0.2s;
+}
+
+.toc a:hover {
+    box-shadow: 0 1px 0;
+    /* text-decoration: underline dashed; */
     color: var(--secondary);
 }
 
@@ -96,6 +104,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: all 0.2s;
 }
 
 .post-entry>.post-info {
@@ -108,6 +117,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .post-entry>.entry-cover {
     border-radius: 10px;
     width: 20%;
+    min-width: 100px;
     margin-bottom: unset;
     padding-right: 10px;
     flex-shrink: 0;
@@ -118,9 +128,13 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     max-height: 175px;
 }
 
-.post-entry:hover {
+.main>.post-entry:hover {
     /* border-radius: 0; */
-    box-shadow: 0 0 15px 15px var(--border);
+    box-shadow: 0 0 7px 7px var(--border);
+}
+
+#searchResults .post-entry:hover{
+    box-shadow: 0 0 5px 5px var(--border);
 }
 
 .post-single>.entry-cover>img {
@@ -143,14 +157,15 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 }
 
-.post-content li>p>img{
+.post-content li>p>img {
     flex-shrink: 0;
     width: 50%;
     padding-left: 20px;
     margin: unset;
     /* padding-right: 5px; */
 }
-.post-content li>p>span{
+
+.post-content li>p>span {
     margin: auto;
     object-fit: contain;
     /* width: 100%; */

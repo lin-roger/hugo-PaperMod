@@ -13,7 +13,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .toc-container {
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.2s ;
+    transition: opacity 0.2s;
 }
 
 .toc {
@@ -26,72 +26,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     /* background: var(--entry); */
     /* border-radius: var(--radius); */
     padding: 0.4em;
-}
-
-@media (width <=1370px) {
-    .toc-container.show {
-        visibility: visible;
-        opacity: 1;
-
-        z-index: 1000;
-        position: fixed;
-        right: 15px;
-        left: 15px;
-        top: 15px;
-        bottom: 15px;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-
-
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        background-blend-mode: exclusion;
-        background-color: var(--entrya);
-    }
-
-    .toc {
-        background: none;
-        border: none;
-    }
-
-    .toc-btn {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-@media (width > 1370px) {
-    .toc-container {
-        visibility: visible;
-        opacity: 1;
-
-        position: absolute;
-        height: 100%;
-        border-right: 1px solid var(--border);
-        left: calc((var(--toc-width) + var(--gap)) * -1);
-        top: calc(var(--gap) * 2);
-        width: var(--toc-width);
-    }
-
-    .toc {
-        position: sticky;
-        top: var(--gap);
-        border: unset;
-        background: unset;
-        border-radius: unset;
-        width: 100%;
-        margin: 0 2px 40px 2px;
-    }
-
-    .toc-container.wide .toc .inner {
-        margin: 0;
-    }
-
-    .toc-btn {
-        visibility: hidden;
-        opacity: 0;
-    }
-
 }
 
 .toc details summary {
@@ -114,23 +48,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .toc ul {
     list-style-type: circle;
-}
-
-.toc .inner {
-    margin: 0 0 0 20px;
-    padding: 0px 15px 15px 20px;
-    font-size: 16px;
-
-    /*目录显示高度*/
-    max-height: 83vh;
-    overflow-y: auto;
-}
-
-.toc .inner::-webkit-scrollbar-thumb {
-    /*滚动条*/
-    background: var(--border);
-    border: 7px solid var(--theme);
-    border-radius: var(--radius);
 }
 
 .toc li ul {
@@ -226,11 +143,92 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     /* flex-shrink: 0; */
 }
 
-/* span{
-    overflow-y: hidden;
-} */
+@media (width <=1370px) {
+    .toc-container.show {
+        visibility: visible;
+        opacity: 1;
 
-/* .post-content li>p>* {
-    flex-shrink: 0;
-    width: 45%;
-} */
+        z-index: 1000;
+        position: fixed;
+        right: 15px;
+        left: 15px;
+        top: 15px;
+        bottom: 15px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: auto;
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-blend-mode: exclusion;
+        background-color: var(--entrya);
+    }
+
+    .show::-webkit-scrollbar-thumb{
+        background: var(--border);
+        border: 7px solid var(--theme);
+        border-radius: var(--radius);
+        margin-right: 5px;
+    }
+
+    .show .toc {
+        background: none;
+        border: none;
+        overflow-y: visible;
+    }
+
+    .toc-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (width > 1370px) {
+    .toc-container {
+        visibility: visible;
+        opacity: 1;
+
+        position: absolute;
+        height: 100%;
+        border-right: 1px solid var(--border);
+        left: calc((var(--toc-width) + var(--gap)) * -1);
+        top: calc(var(--gap) * 2);
+        width: var(--toc-width);
+    }
+
+    .toc {
+        position: sticky;
+        top: var(--gap);
+        border: unset;
+        background: unset;
+        border-radius: unset;
+        width: 100%;
+        margin: 0 2px 40px 2px;
+    }
+
+    .toc-container.wide .toc .inner {
+        margin: 0;
+    }
+
+    .toc-btn {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .toc .inner {
+        margin: 0 0 0 20px;
+        padding: 0px 15px 15px 20px;
+        font-size: 16px;
+    
+        /*目录显示高度*/
+        max-height: 83vh;
+        overflow-y: auto;
+    }
+    
+    .toc .inner::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border: 7px solid var(--theme);
+        border-radius: var(--radius);
+    }
+
+}

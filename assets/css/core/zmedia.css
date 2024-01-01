@@ -47,6 +47,14 @@
     }
 }
 
+/* @media screen and (max-width: 767px) {
+
+    ::-webkit-scrollbar {
+        width: 15px;
+        height: 11px;
+    }
+} */
+
 @media (prefers-reduced-motion) {
 
     /* terms; profile-mode; post-single; post-entry; post-entry; search; search */

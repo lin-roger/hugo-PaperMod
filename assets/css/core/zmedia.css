@@ -31,11 +31,11 @@
 }
 
 /* footer */
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .list .top-link {
         transform: translateY(-5rem);
     }
-}
+} */
 
 /* from zmedia */
 @media screen and (min-width: 768px) {

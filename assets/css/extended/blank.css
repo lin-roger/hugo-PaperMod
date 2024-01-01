@@ -156,7 +156,9 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         bottom: 15px;
         border: 1px solid var(--border);
         border-radius: var(--radius);
-        overflow: auto;
+
+        padding: 5px 2px;
+        /* overflow: auto; */
 
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -164,17 +166,27 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         background-color: var(--entrya);
     }
 
-    .show::-webkit-scrollbar-thumb{
-        background: var(--border);
-        border: 7px solid var(--theme);
+    .show .toc::-webkit-scrollbar {
+        width: 3px;
+        height: 5px;
+    }
+
+    .show .toc::-webkit-scrollbar-thumb {
+        background: var(--tertiary);
+        border: none;
+        /* border: 7px solid var(--theme); */
         border-radius: var(--radius);
-        margin-right: 5px;
     }
 
     .show .toc {
+        position: static;
         background: none;
         border: none;
-        overflow-y: visible;
+        margin: 0;
+        padding: 0;
+
+        overflow: auto;
+        height: 100%;
     }
 
     .toc-btn {
@@ -219,12 +231,12 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         margin: 0 0 0 20px;
         padding: 0px 15px 15px 20px;
         font-size: 16px;
-    
+
         /*目录显示高度*/
         max-height: 83vh;
         overflow-y: auto;
     }
-    
+
     .toc .inner::-webkit-scrollbar-thumb {
         background: var(--border);
         border: 7px solid var(--theme);

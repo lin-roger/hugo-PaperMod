@@ -42,23 +42,33 @@
 
     /* reset */
     ::-webkit-scrollbar {
-        width: 19px;
-        height: 11px;
+        width: 20px;
+        height: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--tertiary);
+        border-color: var(--theme);
+        border-style: solid;
+        border-width: 5px 5px;
+        border-radius: var(--radius);
     }
 }
 
 @media screen and (max-width: 767px) {
 
-    /* ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-    } */
+    }
 
-    /* ::-webkit-scrollbar-thumb {
+    ::-webkit-scrollbar-thumb {
         background: var(--tertiary);
-        border: 3px solid var(--theme);
+        border-color: var(--theme);
+        border-style: solid;
+        border-width: 3px 3px;
         border-radius: var(--radius);
-    } */
+    }
 }
 
 @media (prefers-reduced-motion) {
@@ -82,7 +92,7 @@
 }
 
 
-@media (425px <= width < 768px) {
+@media (425px <=width < 768px) {
     html {
         font-size: 12px;
     }

@@ -150,14 +150,15 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
         z-index: 1000;
         position: fixed;
-        right: 15px;
-        left: 15px;
-        top: 15px;
-        bottom: 15px;
-        border: 1px solid var(--border);
+        right: var(--gap);
+        left: var(--gap);
+        top: var(--gap);
+        bottom: var(--gap);
+        /* border: 1px solid var(--border); */
+        border: none;
         border-radius: var(--radius);
 
-        padding: 5px 2px;
+        padding: 8px 5px;
         /* overflow: auto; */
 
         backdrop-filter: blur(10px);
@@ -168,13 +169,12 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
     .show .toc::-webkit-scrollbar {
         width: 3px;
-        height: 5px;
+        height: 3px;
     }
 
     .show .toc::-webkit-scrollbar-thumb {
         background: var(--tertiary);
         border: none;
-        /* border: 7px solid var(--theme); */
         border-radius: var(--radius);
     }
 

@@ -19,7 +19,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .toc details summary {
     cursor: zoom-in;
     margin-inline-start: 20px;
-    padding: 12px 0;
+    padding: 8px 0;
 }
 
 .toc details[open] summary {
@@ -153,6 +153,14 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     background: var(--tertiary);
     border: none;
     border-radius: var(--radius);
+    width: 100%;
+}
+
+.toc-container hr{
+    width: 50%;
+    margin: 8px auto;
+    border: 1px solid var(--tertiary);
+    border-radius: var(--radius);
 }
 
 .toc img {
@@ -166,6 +174,8 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     overflow-y: scroll;
     scroll-snap-type: y proximity;
 }
+
+
 
 @media (width <=1370px) {
 

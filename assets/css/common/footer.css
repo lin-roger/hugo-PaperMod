@@ -34,8 +34,8 @@
 .top-link {
     visibility: hidden;
     position: fixed;
-    bottom: 80px;
-    right: 30px;
+    bottom: calc(var(--gap) + 10px + 50px);
+    right: calc(var(--gap) + 10px);
     z-index: 99;
     width: 42px;
     height: 42px;
@@ -51,8 +51,8 @@
 
 .toc-btn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: calc(var(--gap) + 10px);
+    right: calc(var(--gap) + 10px);
     z-index: 1001;
     width: 42px;
     height: 42px;

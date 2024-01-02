@@ -172,8 +172,8 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         padding: 8px 3px;
         /* overflow: auto; */
 
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         background-blend-mode: exclusion;
         background-color: var(--entrya);
     }

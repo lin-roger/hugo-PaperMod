@@ -363,7 +363,7 @@ h6:hover .anchor {
 
 .paginav {
     margin-top: 10px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     display: flex;
     /* line-height: 30px; */
     border-radius: var(--radius);
@@ -374,6 +374,7 @@ h6:hover .anchor {
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
     border-radius: var(--radius);
+    padding-bottom: 5px;
 }
 
 .paginav .title {

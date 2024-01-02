@@ -169,7 +169,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         border: none;
         border-radius: var(--radius);
 
-        padding: 8px 5px;
+        padding: 8px 3px;
         /* overflow: auto; */
 
         backdrop-filter: blur(10px);

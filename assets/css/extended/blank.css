@@ -10,15 +10,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     --toc-width: 300px;
 }
 
-.toc-container {
-    position: fixed;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s;
-    /* display: none; */
-}
-
 .toc details summary {
     cursor: zoom-in;
     margin-inline-start: 20px;
@@ -31,10 +22,8 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 
 .active {
-    /* font-size: 10%; */
     font-weight: 600;
     box-shadow: 0 1px 0;
-    /* text-decoration: underline solid; */
 }
 
 .toc ul {
@@ -58,7 +47,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .toc a:hover {
     box-shadow: 0 1px 0;
-    /* text-decoration: underline dashed; */
     color: var(--secondary);
 }
 
@@ -71,9 +59,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .post-entry>.post-info {
     display: inline-block;
-    /* overflow: hidden; */
     min-width: 50%;
-    /* padding-left: 10px; */
 }
 
 .post-entry>.entry-cover {
@@ -91,7 +77,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 .main>.post-entry:hover {
-    /* border-radius: 0; */
     box-shadow: 0 0 7px 7px var(--border);
 }
 
@@ -111,55 +96,17 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     margin: auto;
 }
 
-/* .post-content img.floatTop {
-    z-index: 998;
-    position: fixed;
-    max-width: calc(100vw - var(--gap) * 2);
-    max-height: calc(100dvh - var(--gap) * 2);
-
-    top: var(--gap);
-    bottom: var(--gap);
-    left: var(--gap);
-    right: var(--gap);
-} */
-
-/* .post-content li>p {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
-} */
-
 .post-content li>p>img {
-    /* flex-shrink: 0; */
-    /* width: 50%; */
-    /* padding-left: 20px; */
     margin-top: var(--gap);
     margin-bottom: var(--gap);
-    /* padding-right: 5px; */
 }
 
 .post-content li>p>span {
     margin: auto;
     object-fit: contain;
-    /* width: 100%; */
-    /* flex-shrink: 0; */
 }
 
-.show ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-}
-
-.show ::-webkit-scrollbar-thumb {
-    background: var(--tertiary);
-    border: none;
-    border-radius: var(--radius);
-    width: 100%;
-}
-
-.toc-container hr{
+.toc-container hr {
     width: 50%;
     margin: 8px auto;
     border: 1px solid var(--tertiary);
@@ -167,39 +114,59 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 .toc img {
+    scroll-snap-align: center;
+    object-fit: contain;
     margin: auto;
     width: 100%;
     max-width: 100%;
-    padding-bottom: 10px;
 }
 
 #loi .inner {
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
+.toc ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
 
+.toc ::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border: none;
+    border-radius: var(--radius);
+    width: 100%;
+}
 
 @media (width <=1370px) {
-
-    .toc-container.show {
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-        /* display: block; */
-
-        z-index: 1000;
-        /* position: fixed; */
-        right: var(--gap);
-        left: var(--gap);
+    .toc-container {
+        position: fixed;
         top: var(--gap);
         bottom: var(--gap);
-        /* border: 1px solid var(--border); */
-        border: none;
-        border-radius: var(--radius);
+        left: 0;
+        right: 50vh;
 
+        visibility: hidden;
+        opacity: 0;
+
+        transition:
+            background 0.2s,
+            visibility 0.2s,
+            opacity 0.2s,
+            left 0.2s,
+            right 0.2s;
+    }
+
+    .toc-container.show {
+        right: var(--gap);
+        left: var(--gap);
+
+        visibility: visible;
+        opacity: 1;
+
+        z-index: 1000;
         padding: 8px 3px;
-        /* overflow: auto; */
+        border-radius: var(--radius);
 
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
@@ -208,19 +175,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     }
 
     .toc {
-        margin: 0 2px 40px 2px;
-        /* position: fixed;
-        right: 15px;
-        left: 15px;
-        top: 15px; */
-        
-        /* border: 1px solid var(--border); */
-        /* background: var(--entry); */
-        /* border-radius: var(--radius); */
-        padding: 0.4em;
-    }
-
-    .show .toc {
         position: static;
         background: none;
         border: none;
@@ -229,14 +183,10 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     }
 
     .inc {
-        /* overflow: auto; */
         height: 100%;
     }
 
     .toc .inner {
-        margin-right: 0;
-        margin-left: 0;
-        /* padding-right: 0; */
         --summaryhight: calc(12px * 2 + 1.6em);
         --inpadding: calc(var(--gap) * 2 + 8px * 2);
         max-height: calc(100dvh - var(--inpadding) - var(--summaryhight) * 2);
@@ -244,21 +194,11 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     }
 
     #loi .inner img {
-        scroll-snap-align: center;
-        max-height: calc(100dvh - var(--inpadding) - var(--summaryhight) * 2);
-        object-fit: contain;
-    }
-
-    .toc-btn {
-        visibility: visible;
-        opacity: 1;
+        height: calc(100dvh - var(--inpadding) - var(--summaryhight) * 2);
     }
 }
 
 @media (width > 1370px) {
-    #loi .inner img {
-        scroll-snap-align: center;
-    }
 
     .toc-container {
         visibility: visible;
@@ -270,11 +210,13 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         left: calc((var(--toc-width) + var(--gap)) * -1);
         top: calc(var(--gap) * 2);
         width: var(--toc-width);
+        transition:
+            left .2s,
+            background .2s,
+            opacity .2s;
     }
 
     .toc {
-        /* position: sticky;
-        top: var(--gap); */
         border: unset;
         background: unset;
         border-radius: unset;
@@ -282,35 +224,55 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
         margin: 0 2px 0px 2px;
     }
 
-    .inc {
+    .toc-container.show {
+        position: fixed;
+        top: var(--gap);
+        bottom: var(--gap);
+        left: calc((100dvw - (var(--main-width) + var(--gap) * 2)) / 2);
+        right: calc((100dvw - (var(--main-width) + var(--gap) * 2)) / 2);
+        /* left: calc((100dvw - (var(--main-width) + var(--gap) * 2)) / 2); */
+
+        z-index: 1000;
+
+        width: unset;
+        height: auto;
+        max-width: calc(var(--main-width) + var(--gap) * 2);
+
+        border: none;
+        border-radius: var(--radius);
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        background-blend-mode: exclusion;
+        background-color: var(--entrya);
+    }
+
+    :not(.show) .inc {
         position: sticky;
         top: var(--gap);
     }
 
-    /* .toc-container.wide .toc .inner {
-        margin: 0;
-        padding: 0;
-    } */
-
-    .toc-btn {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .toc .inner {
-        margin: 0 0 0 20px;
-        /* padding: 0px 15px 15px 20px; */
+    :not(.show) .toc .inner {
+        margin-bottom: 20px;
         font-size: 16px;
+        overflow-y: auto;
 
         /*目录显示高度 vh - nav linehight - toc linehight - tov padding*2*/
         max-height: calc(85dvh - 110px);
-        overflow-y: auto;
     }
 
-    .toc .inner::-webkit-scrollbar-thumb {
-        background: var(--border);
-        border: 7px solid var(--theme);
-        border-radius: calc(var(--radius) * 2);
+    .show .toc .inner {
+        margin: 0;
+        overflow-y: scroll;
+
+        --summaryhight: calc(8px * 2 + 1.6rem + 0.4em * 2 + 9px);
+        --inpadding: calc(var(--gap) * 2);
+        max-height: calc(100dvh - var(--inpadding) - var(--summaryhight) * 2);
+    }
+
+    .show img {
+        height: calc(100dvh - var(--inpadding) - var(--summaryhight) * 2 * 0.9);
+        padding: 1px;
     }
 
 }

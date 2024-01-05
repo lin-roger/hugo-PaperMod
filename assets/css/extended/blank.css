@@ -158,8 +158,11 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     }
 
     .toc-container.show {
-        right: var(--gap);
-        left: var(--gap);
+        --dgap: calc((100dvw - (var(--main-width) + var(--gap) * 2)) / 2);
+        --tgap: clamp(var(--gap), calc((var(--dgap) - 85px) * 86), calc(var(--dgap)));
+        right: var(--tgap);
+        left: var(--tgap);
+        /* max-width: calc(var(--main-width) + var(--gap) * 2); */
 
         visibility: visible;
         opacity: 1;

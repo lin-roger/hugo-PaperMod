@@ -1,0 +1,83 @@
+/* 
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-EL.ttc') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-L.ttc') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-R.ttc') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-M.ttc') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-SB.ttc') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-B.ttc') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GenRyuMin';
+    src:
+        url('../../fonts/GenRyuMin/GenRyuMin-H.ttc') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+} */
+
+body {
+    /* font-family: 'GenRyuMin', 'Noto Serif TC', serif; */
+    font-family: 'Noto Serif TC', serif;
+    /* font-family: 'GeneralSans-Variable', sans-serif; */
+}
+
+::selection{
+    background-color: var(--selec);
+    
+    /* border-radius: var(--radius); */
+    /* color: var(); */
+}
+
+/* p {
+    font-family: 'Iansui-Regular', 'Noto Serif TC', serif;
+} */
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'GeneralSans-Variable', sans-serif;
+} */
